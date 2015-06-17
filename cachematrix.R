@@ -35,11 +35,13 @@ list(set= set, get= get,
 ## returns the inverse of the matrix.
 
 cacheSolve <- function(x, ...) {
+  
   matrixInverse <- x$getInverse()                           ## retreives the inverse of the matrix from the 1st function
   if (!is.null(matrixInverse)) {                            ## checkes if the inverse is not NULL
     message('returning cached Inverse of the matrix')       ## in which case it returns a message
     return(matrixInverse)                                   ## returns the inverse matrix cached in the 1st function
   }
+  
   matrixInverse <- solve(x$get())                           ## retreives the matrix from 1st function and calculates is inverse
   x$setInverse(matrixInverse)                               ## stores the calculated inverse of the matrix  in the 1st function
   return(matrixInverse)                                     ## Returns the calculated inverse of the matrix
