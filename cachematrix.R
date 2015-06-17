@@ -32,7 +32,7 @@ list(set= set, get= get,
 
 ## cacheSolve is a function that checks if the inverse of the matrix cached in makeCacheMatrix is NULL in which case it
 ## calculates it and stores it in the function makeCacheMatrix. If the inverse is not NULL then it writes a message and
-## returns the inverse of the matrix.
+## returns the cached inverse of the matrix.
 
 cacheSolve <- function(x, ...) {
   
